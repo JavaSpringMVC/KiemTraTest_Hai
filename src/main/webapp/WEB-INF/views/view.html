@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chúa tạo ra những vật</h1>
+<h2><a th:href="@{/thing/s}">List thing of god</a></h2>
+<br>
+<p th:text="${thing.getName()}"></p>
+<p th:text="${thing.getDescription()}"></p>
+</body>
+</html>

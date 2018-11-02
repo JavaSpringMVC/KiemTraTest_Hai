@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chúa tạo ra những vật</h1>
+<h2><a th:href="@{/thing}">Create new thing</a></h2>
+<br>
+<th:block th:each="thing : ${things}">
+    <a th:href="@{/thing/__${thing.getId()}__}" th:text="${thing.getId()+' - '+thing.getName()}"></a>
+    <br>
+</th:block>
+</body>
+</html>
